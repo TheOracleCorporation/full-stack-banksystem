@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bank-card">
+        <h1>Мой банк</h1>
+        <p>Создание аккаунта</p>
+
+        <form id="registerForm">
+            <div class="field">
+                <label for="name">Имя</label>
+                <input type="text" id="name" placeholder="Ваше имя" required>
+            </div>
+
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="field">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" placeholder="Минимум 6 символов" required minlength="6">
+            </div>
+
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+
+        <p id="message"></p>
+
+        <p>
+            Уже есть аккаунт?
+            <a href="/">Войти</a>
+        </p>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>

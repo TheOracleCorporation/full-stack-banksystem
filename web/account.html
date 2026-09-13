@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Мой банк</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="bank-card">
+
+        <h1>Мой банк</h1>
+
+        <p>Добро пожаловать!</p>
+
+        <div class="balance">
+
+            <span>Баланс</span>
+
+            <strong id="balance">
+                Загрузка...
+            </strong>
+
+        </div>
+
+        <div class="buttons">
+            <button id="depositButton">Пополнить</button>
+            <button id="transferButton">Перевести</button>
+            <button id="withdrawButton">Снять</button>
+            <button id="historyButton">История</button>
+            <button id="profileButton">Профиль</button>
+            <button id="logoutButton">Выйти</button>
+        </div>
+
+    </div>
+
+    <script src="modal.js"></script>
+    <script src="account.js"></script>
+
+</body>
+
+</html>

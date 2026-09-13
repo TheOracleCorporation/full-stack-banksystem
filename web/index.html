@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Мой банк</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bank-card">
+
+        <h1>Мой банк</h1>
+
+        <p>Вход в аккаунт</p>
+
+        <form id="loginForm">
+
+            <div class="field">
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="you@example.com"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="password">Пароль</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="••••••••"
+                    required
+                >
+            </div>
+
+            <button type="submit">Войти</button>
+
+        </form>
+
+        <p>
+            Нет аккаунта?
+            <a href="/register.html">Зарегистрироваться</a>
+        </p>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

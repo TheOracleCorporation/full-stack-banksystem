@@ -1,0 +1,307 @@
+:root {
+    --color-bg: #f2f4f7;
+    --color-card: #ffffff;
+    --color-border: #e3e5ea;
+    --color-text: #18181b;
+    --color-text-muted: #6b7280;
+    --color-placeholder: #9ca3af;
+
+    --color-primary-bg: #18181b;
+    --color-primary-bg-hover: #303035;
+    --color-primary-text: #ffffff;
+
+    --color-neutral-bg: #f2f4f7;
+    --color-neutral-bg-hover: #e7e9ee;
+    --color-neutral-border: #d9dbe1;
+    --color-neutral-text: #18181b;
+
+    --color-danger: #dc2626;
+    --color-success: #16a34a;
+
+    --radius-card: 20px;
+    --radius-control: 10px;
+
+    --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+    padding: 40px 16px;
+}
+
+.bank-card {
+    width: 100%;
+    max-width: 420px;
+    margin: 50px auto;
+    padding: 36px 32px;
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 8px 24px rgba(16, 24, 40, 0.06);
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 0 0 6px;
+}
+
+.bank-card > p:first-of-type {
+    margin-top: 0;
+}
+
+p {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 15px;
+}
+
+/* Form fields with labels, like the Figma "Value" inputs */
+form {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+}
+
+.field label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+input {
+    width: 100%;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--color-text);
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-control);
+    padding: 12px 14px;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+input::placeholder {
+    color: var(--color-placeholder);
+}
+
+input:focus {
+    border-color: var(--color-primary-bg);
+    box-shadow: 0 0 0 3px rgba(24, 24, 27, 0.08);
+}
+
+/* Buttons */
+button {
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid transparent;
+    border-radius: var(--radius-control);
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+}
+
+/* Primary action: submit forms, deposit, etc. — solid dark, like "Register"/"Submit" in the design */
+button,
+form button[type="submit"] {
+    background-color: var(--color-primary-bg);
+    color: var(--color-primary-text);
+}
+
+button:hover {
+    background-color: var(--color-primary-bg-hover);
+}
+
+button:active {
+    opacity: 0.9;
+}
+
+/* Neutral/secondary action: navigation buttons like "Sign in" in the header — light with a border */
+button.secondary,
+#backButton,
+#historyButton,
+#profileButton,
+#logoutButton {
+    background-color: var(--color-neutral-bg);
+    color: var(--color-neutral-text);
+    border-color: var(--color-neutral-border);
+}
+
+button.secondary:hover,
+#backButton:hover,
+#historyButton:hover,
+#profileButton:hover,
+#logoutButton:hover {
+    background-color: var(--color-neutral-bg-hover);
+}
+
+a {
+    color: var(--color-text);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+#message {
+    min-height: 20px;
+    font-weight: 500;
+}
+
+/* Balance panel */
+.balance {
+    margin-top: 30px;
+    padding: 22px;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-control);
+}
+
+.balance span {
+    display: block;
+    color: var(--color-text-muted);
+    font-size: 14px;
+}
+
+.balance strong {
+    display: block;
+    margin-top: 8px;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.buttons {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.buttons button {
+    flex: 1 1 calc(50% - 5px);
+}
+
+/* Profile info list */
+.profile-info {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.profile-info p {
+    text-align: left;
+    margin: 16px 0 0;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+}
+
+.profile-info strong {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* Transaction history */
+#history {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#history > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 15px;
+}
+
+/* Modal (replaces native prompt/alert) */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(24, 24, 27, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    z-index: 1000;
+    animation: modal-fade-in 0.12s ease-out;
+}
+
+@keyframes modal-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-box {
+    width: 100%;
+    max-width: 360px;
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: 28px 26px;
+    box-shadow: 0 8px 24px rgba(16, 24, 40, 0.12), 0 2px 6px rgba(16, 24, 40, 0.08);
+}
+
+.modal-title {
+    margin: 0 0 18px;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    text-align: left;
+    color: var(--color-text);
+}
+
+.modal-message {
+    margin: 0 0 4px;
+    text-align: left;
+    color: var(--color-text);
+    font-size: 15px;
+}
+
+.modal-box .field {
+    margin-bottom: 16px;
+}
+
+.modal-box .field:last-of-type {
+    margin-bottom: 22px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.modal-actions button {
+    flex: 1;
+}
+
+.modal-error {
+    margin: -8px 0 16px;
+    color: var(--color-danger);
+    font-size: 13px;
+    text-align: left;
+}
