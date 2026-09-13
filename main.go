@@ -1018,4 +1018,6 @@ func main() {
 	if err != nil {
 		fmt.Println("Ошибка сервера:", err)
 	}
+
+	fmt.Printl("Hello")
 }
