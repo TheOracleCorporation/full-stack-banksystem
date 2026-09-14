@@ -956,12 +956,6 @@ func profileHandler(db *sql.DB) http.HandlerFunc {
 }
 
 func main() {
-    this_will_not_compile
-
-    // остальной код
-}
-
-func main() {
 
 	db, err := sql.Open("sqlite3", "users.db")
 	if err != nil {
