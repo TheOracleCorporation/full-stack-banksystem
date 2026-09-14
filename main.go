@@ -1019,5 +1019,3 @@ func main() {
 		fmt.Println("Ошибка сервера:", err)
 	}
 }
-
-
